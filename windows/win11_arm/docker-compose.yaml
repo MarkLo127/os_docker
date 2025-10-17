@@ -7,9 +7,6 @@ services:
       KVM: "N"
       RAM_SIZE: "8G"
       CPU_CORES: "6"
-      LANGUAGE: "Chinese"
-      REGION: "zh-TW"
-      KEYBOARD: "zh-TW"
     devices:
       - /dev/net/tun
     cap_add:
