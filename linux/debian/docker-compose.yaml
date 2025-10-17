@@ -4,6 +4,7 @@ services:
     image: qemux/qemu-arm
     environment:
       BOOT: "debian"
+      KVM: "N"
       RAM_SIZE: "8G"
       CPU_CORES: "6"
     devices:
