@@ -1,9 +1,9 @@
 services:
-  windows:
-    image: dockurr/windows
-    container_name: windows10
+  macos:
+    image: dockurr/macos
+    container_name: sequoia
     environment:
-      VERSION: "10"
+      VERSION: "15"
       KVM: "N"
       RAM_SIZE: "8G"
       CPU_CORES: "6"
@@ -11,14 +11,15 @@ services:
       REGION: "zh-TW"
       KEYBOARD: "zh-TW"
     devices:
+      - /dev/kvm
       - /dev/net/tun
     cap_add:
       - NET_ADMIN
     ports:
       - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
+      - 5900:5900/tcp
+      - 5900:5900/udp
     volumes:
-      - ./windows:/storage
+      - ./macos:/storage
     restart: always
     stop_grace_period: 2m
