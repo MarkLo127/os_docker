@@ -5,7 +5,7 @@ services:
     environment:
       BOOT: "ubuntu"
       KVM: "N"
-      RAM_SIZE: "8G"
+      RAM_SIZE: "4G"
       CPU_CORES: "6"
     devices:
       - /dev/kvm
